@@ -46,13 +46,13 @@
     <section id="booking" class="booking">
         <h2>Registrasi Booking</h2>
         <form>
-            <label for="name"><br>Nama:</br></label>
+            <label for="name">Nama:</label>
             <input type="text" id="name" required>
             
-            <label for="date"><br>Tanggal:</br></label>
+            <label for="date"><br><br>Tanggal:</br></br></label>
             <input type="date" id="date" required>
             
-            <label for="service">Layanan:</label>
+            <label for="service"><br><br>Layanan:</br></br></label>
             <select id="service">
                 <option>Potong Rambut</option>
                 <option>Facial</option>
