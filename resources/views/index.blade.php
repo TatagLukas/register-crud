@@ -44,7 +44,8 @@
     </section>
 
     <section id="booking" class="booking">
-        <h2>Registrasi Booking</h2>
+
+    <br><br><h2>Registrasi Booking</h2>
         <form>
             <label for="name">Nama:</label>
             <input type="text" id="name" required>
@@ -64,7 +65,7 @@
     </section>
 
     <section id="register" class="register">
-        <h2>Registrasi</h2>
+        <h2>Registrasi Akun</h2>
         <form>
             <label for="fullname">Nama Lengkap:</label>
             <input type="text" id="fullname" required>
