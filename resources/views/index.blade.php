@@ -65,15 +65,16 @@
     </section>
 
     <section id="register" class="register">
-        <h2>Registrasi Akun</h2>
+
+        <br><br><h2>Registrasi Akun</h2>
         <form>
-            <label for="fullname">Nama Lengkap:</label>
+            <label for="fullname"><br><br>Nama Lengkap:</br></br></label>
             <input type="text" id="fullname" required>
             
-            <label for="email">Email:</label>
+            <label for="email"><br><br>Email:</br></br></label>
             <input type="email" id="email" required>
             
-            <label for="password">Password:</label>
+            <label for="password"><br><br>Password:</br></br></label>
             <input type="password" id="password" required>
             
             <button type="submit">Daftar</button>
