@@ -68,7 +68,7 @@
 
         <br><br><h2>Registrasi Akun</h2>
         <form>
-            <label for="fullname"><br><br>Nama Lengkap:</br></br></label>
+            <label for="fullname">Nama Lengkap:</label>
             <input type="text" id="fullname" required>
             
             <label for="email"><br><br>Email:</br></br></label>
