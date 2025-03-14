@@ -29,16 +29,16 @@
         <h2>Layanan Kami</h2>
         <div class="service-list">
             <div class="service-item">
-                <h3>Potong Rambut</h3>
+                <h3>Hair Treatment</h3>
                 <p>Model rambut terbaik sesuai keinginan Anda.</p>
             </div>
             <div class="service-item">
-                <h3>Facial</h3>
-                <p>Perawatan wajah untuk kulit yang lebih sehat dan bersinar.</p>
+                <h3>Nail Treatment</h3>
+                <p>Model dan perawatan kuku yang nyaman sesuai keingingnan anda.</p>
             </div>
             <div class="service-item">
-                <h3>Manicure & Pedicure</h3>
-                <p>Perawatan kuku yang indah dan sehat.</p>
+                <h3>Body Treatment</h3>
+                <p>Perawatan tangan dan kaki yang nyaman.</p>
             </div>
         </div>
     </section>
