@@ -109,7 +109,7 @@
     }
     
     form label,
-}
+
     </style>
 </head>
 <body>
