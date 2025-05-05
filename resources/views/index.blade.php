@@ -18,8 +18,13 @@
         <h1>Beauty Salon</h1>
         <nav>
             <ul>
-                <p>Selamat datang di Beauty Salon, 
-                    Kami menghadirkan layanan premium mulai dari perawatan rambut, kuku, hingga tubuh, dengan sentuhan profesional dan suasana yang nyaman. Didukung oleh tim stylist berpengalaman dan produk berkualitas, kami memastikan setiap pelanggan tampil percaya diri dengan tampilan terbaik mereka.</p>
+                <p>✨ Selamat datang di Beauty Salon 
+                    – tempat di mana keindahan dan kenyamanan berpadu sempurna. 
+                    Kami menghadirkan beragam layanan premium mulai dari 
+                    perawatan rambut, kuku, hingga tubuh, dengan sentuhan profesional dari stylist berpengalaman. 
+                    Dengan penggunaan produk berkualitas tinggi dan suasana salon yang hangat, kami berkomitmen untuk membuat Anda merasa istimewa di setiap kunjungan. 
+                    Saatnya tampil lebih percaya diri dan bersinar dengan versi terbaik dari diri Anda!
+                </p>
 
             </ul>
             <section class="slider">
