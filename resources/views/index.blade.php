@@ -28,12 +28,41 @@
             </ul>
             <section class="slider">
                 <div class="slides">
-                    <img src="{{ asset('images/download (2).jpeg') }}" alt="Salon Image" style="width:50%; max-width:100px;">
-                    <img src="{{ asset('images/download (3).jpeg') }}" alt="Salon Image" style="width:50%; max-width:100px;">
-                    <img src="{{ asset('images/download (4).jpeg') }}" alt="Salon Image" style="width:50%; max-width:100px;">
+                    <img src="{{ asset('images/1.jpg') }}">
+                    <img src="{{ asset('images/2.jpg') }}">
+                    <img src="{{ asset('images/3.jpg') }}">
+                    <img src="{{ asset('images/4.jpg') }}">
                 </div>
               </section>
               
+              <style>
+                .slider {
+                    width:800px;
+                    height: 400px;
+                    margin: auto;
+                    overflow: hidden;
+                    position: relative;
+                }
+                
+                .slides {
+                    display: flex;
+                    width: 400%; /* 4 gambar */
+                    animation: slide 50s ease-in-out infinite;
+                }
+                
+                .slides img {
+                    width:800px;
+                    height: 400px;
+                }
+                
+                @keyframes slide {
+                    0% { transform: translateX(0); }
+                    25% { transform: translateX(-100%); }
+                    50% { transform: translateX(-200%); }
+                    75% { transform: translateX(-300%); }
+                    100% { transform: translateX(0); }
+                }
+                </style>
         </nav>
     </header>
     
