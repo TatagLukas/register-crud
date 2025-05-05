@@ -9,7 +9,106 @@
     <style>
         body {
             
-  background-color: #fff5e6;
+  background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #F5F5DC;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        .services {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .service-list {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .service-item {
+            background-color: #f8f8f8;
+            border-radius: 5px;
+            padding: 20px;
+            width: 30%;
+        }
+        
+        .booking {
+            background-color: #fff3e6;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        footer {
+            background-color: ##F5F5DC;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .slider img {
+          width: 100%;
+          height: auto; /* Maintain aspect ratio */
+      }
+
+      .slider {
+          position: relative; /* Position relative for absolute positioning of slides */
+      }
+
+      .slides {
+          display: flex; /* Use flexbox for horizontal alignment */
+          transition: transform 1s ease-in-out; /* Smooth transition */
+      }
+
+      .slide {
+          min-width: 100%; /* Each slide takes full width */
+          opacity: 0; /* Hide all slides initially */
+          transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+      }
+
+      .slide.active {
+          opacity: 1; /* Show active slide */
+      }
+
+    </style>
+    <style>
+    body {
+        background-color:#f0f0f0 ;
+    }
+    header h1{
+        font-size :50px ;
+    }
+    header p{
+        font-size :30px ;
+    }
+    section h2{
+        font-size :40px ;
+    }
+    section p{
+        font-size :25px ;
+    }
+    footer p{
+        font-size :20px ;
+    }
+    
+    form label,
 }
     </style>
 </head>
@@ -28,17 +127,17 @@
             </ul>
             <section class="slider">
                 <div class="slides">
-                    <img src="{{ asset('images/1.jpg') }}">
-                    <img src="{{ asset('images/2.jpg') }}">
-                    <img src="{{ asset('images/3.jpg') }}">
-                    <img src="{{ asset('images/4.jpg') }}">
+                    <img src="{{ asset('images/5.jpg') }}">
+                    <img src="{{ asset('images/6.jpg') }}">
+                    <img src="{{ asset('images/7.jpg') }}">
+                    <img src="{{ asset('images/8.jpg') }}">
                 </div>
               </section>
               
               <style>
                 .slider {
-                    width:800px;
-                    height: 400px;
+                    width: 100%;
+                    height: auto;
                     margin: auto;
                     overflow: hidden;
                     position: relative;
@@ -47,12 +146,12 @@
                 .slides {
                     display: flex;
                     width: 400%; /* 4 gambar */
-                    animation: slide 50s ease-in-out infinite;
+                    animation: slide 40s infinite;
                 }
                 
                 .slides img {
-                    width:800px;
-                    height: 400px;
+                    width: 100%;
+                    height: auto;
                 }
                 
                 @keyframes slide {
