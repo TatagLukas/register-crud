@@ -29,9 +29,9 @@
             </ul>
             <section class="slider">
                 <div class="slides">
-                  <img src="c:\Users\Lenovo\Downloads\download (2).jpeg" class="slide" style="display: block;">
-                  <img src="https://source.unsplash.com/1600x600/?beauty,nails" class="slide">
-                  <img src="https://source.unsplash.com/1600x600/?spa,relax" class="slide">
+                    <img src="{{ asset('images/download (2).jpeg') }}" alt="Salon Image" style="width:50%; max-width:100px;">
+                    <img src="{{ asset('images/download (3).jpeg') }}" alt="Salon Image" style="width:50%; max-width:100px;">
+                    <img src="{{ asset('images/download (4).jpeg') }}" alt="Salon Image" style="width:50%; max-width:100px;">
                 </div>
               </section>
               
@@ -85,6 +85,26 @@
     <footer id="contact">
         <p>&copy; 2025 Salon Cantik | Kontak: 0812-3456-7890</p>
     </footer>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+      
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) slide.classList.add('active');
+          });
+        }
+      
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % slides.length;
+          showSlide(currentIndex);
+        }
+      
+        showSlide(currentIndex);
+        setInterval(nextSlide, 3000); // Ganti slide tiap 3 detik
+      </script>
+      
 </body>
 </html>
 
