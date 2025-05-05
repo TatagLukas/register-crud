@@ -1,4 +1,4 @@
-<?php
+git remote add originhttps://github.com/TatagLukas/register-crud.git<?php
 
 return [
 

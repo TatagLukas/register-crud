@@ -5,32 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beauty Salon</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        body {
+            
+  background-color: #fff5e6;
+}
+    </style>
 </head>
 <body>
     <header>
         <h1>Beauty Salon</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Layanan</a></li>
-                <li><a href="#booking">Booking</a></li>
-                <li><a href="#register">Registrasi</a></li>
-                <li><a href="#contact">Kontak</a></li>
+                <p>Selamat datang di Beauty Salon, 
+                    Kami menghadirkan layanan premium mulai dari perawatan rambut, kuku, hingga tubuh, dengan sentuhan profesional dan suasana yang nyaman. Didukung oleh tim stylist berpengalaman dan produk berkualitas, kami memastikan setiap pelanggan tampil percaya diri dengan tampilan terbaik mereka.</p>
+
             </ul>
+            <section class="slider">
+                <div class="slides">
+                  <img src="c:\Users\Lenovo\Downloads\download (2).jpeg" class="slide" style="display: block;">
+                  <img src="https://source.unsplash.com/1600x600/?beauty,nails" class="slide">
+                  <img src="https://source.unsplash.com/1600x600/?spa,relax" class="slide">
+                </div>
+              </section>
+              
         </nav>
     </header>
     
-    <section id="home" class="hero">
-        <h2>Best Nails and Hair For Best Moment</h2>
-        <a href="#booking" class="btn">Pesan Sekarang</a>
-    </section>
 
     <section id="services" class="services">
         <h2>Layanan Kami</h2>
         <div class="service-list">
             <div class="service-item">
-                <h3>Hair Treatment</h3>
-                <p>Model rambut terbaik sesuai keinginan Anda.</p>
+                <h3>Hair Cut</h3>
+                <p>Model rambut terbaik sesuai keinginan Anda.
+
+                </p>
             </div>
             <div class="service-item">
                 <h3>Nail Treatment</h3>
@@ -63,24 +74,11 @@
         </form>
     </section>
 
-    <section id="register" class="register">
-        <h2>Registrasi</h2>
-        <form>
-            <label for="fullname">Nama Lengkap:</label>
-            <input type="text" id="fullname" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" required>
-            
-            <button type="submit">Daftar</button>
-        </form>
-    </section>
+    
 
     <footer id="contact">
         <p>&copy; 2025 Salon Cantik | Kontak: 0812-3456-7890</p>
     </footer>
 </body>
 </html>
+
