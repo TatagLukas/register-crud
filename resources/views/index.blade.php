@@ -130,7 +130,7 @@
         }
       
         showSlide(currentIndex);
-        setInterval(nextSlide, 3000); // Ganti slide tiap 3 detik
+        setInterval(nextSlide, 100000); // Ganti slide tiap 20 detik
       </script>
       
 </body>
