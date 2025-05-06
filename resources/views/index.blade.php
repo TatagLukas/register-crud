@@ -2,236 +2,209 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Beauty Salon</title>
-    <link rel="stylesheet" href="styles.css">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            
-  background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #f3e7e9, #e3eeff);
             margin: 0;
             padding: 0;
         }
-        
+
         header {
-            background-color: #F5F5DC;
-            color: white;
-            padding: 20px;
+            background-color: #D2B48C;
+            color: #333;
+            padding: 40px 20px;
             text-align: center;
         }
-        
-        nav ul {
-            list-style-type: none;
-            padding: 0;
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
         }
-        
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
+
+        header p {
+            font-size: 1.25rem;
+            max-width: 900px;
+            margin: auto;
         }
-        
+
+        .carousel {
+            margin-top: 30px;
+        }
+
         .services {
             background-color: #fff;
-            padding: 20px;
+            padding: 60px 20px;
             text-align: center;
         }
-        
-        .service-list {
-            display: flex;
-            justify-content: space-around;
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
         }
-        
+
         .service-item {
             background-color: #f8f8f8;
-            border-radius: 5px;
-            padding: 20px;
-            width: 30%;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-        
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
         .booking {
             background-color: #fff3e6;
-            padding: 20px;
+            padding: 60px 20px;
             text-align: center;
         }
-        
-        footer {
-            background-color: ##F5F5DC;
+
+        .booking form {
+            max-width: 500px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .booking label {
+            font-weight: 600;
+            display: block;
+            margin-top: 20px;
+        }
+
+        .booking input,
+        .booking select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+
+        .booking button {
+            margin-top: 30px;
+            padding: 10px 30px;
+            background-color: #D2B48C;
             color: white;
-            text-align: center;
-            padding: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
         }
 
-        .slider img {
-          width: 100%;
-          height: auto; /* Maintain aspect ratio */
-      }
-
-      .slider {
-          position: relative; /* Position relative for absolute positioning of slides */
-      }
-
-      .slides {
-          display: flex; /* Use flexbox for horizontal alignment */
-          transition: transform 1s ease-in-out; /* Smooth transition */
-      }
-
-      .slide {
-          min-width: 100%; /* Each slide takes full width */
-          opacity: 0; /* Hide all slides initially */
-          transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
-      }
-
-      .slide.active {
-          opacity: 1; /* Show active slide */
-      }
-
-    </style>
-    <style>
-    body {
-        background-color:#f0f0f0 ;
-    }
-    header h1{
-        font-size :50px ;
-    }
-    header p{
-        font-size :30px ;
-    }
-    section h2{
-        font-size :40px ;
-    }
-    section p{
-        font-size :25px ;
-    }
-    footer p{
-        font-size :20px ;
-    }
-    
-    form label,
-
+        footer {
+            background-color: #D2B48C;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Beauty Salon</h1>
-        <nav>
-            <ul>
-                <p>✨ Selamat datang di Beauty Salon 
-                    <br>– tempat di mana keindahan dan kenyamanan berpadu sempurna.</br> 
-                    <br>Kami menghadirkan beragam layanan premium mulai dari perawatan rambut, kuku, hingga tubuh, dengan sentuhan profesional dari stylist berpengalaman. 
-                    Dengan penggunaan produk berkualitas tinggi dan suasana salon yang hangat, kami berkomitmen untuk membuat Anda merasa istimewa di setiap kunjungan. 
-                    Saatnya tampil lebih percaya diri dan bersinar dengan versi terbaik dari diri Anda!</br> 
-                </p>
-
-            </ul>
-            <section class="slider">
-                <div class="slides">
-                    <img src="{{ asset('images/5.jpg') }}">
-                    <img src="{{ asset('images/6.jpg') }}">
-                    <img src="{{ asset('images/7.jpg') }}">
-                    <img src="{{ asset('images/8.jpg') }}">
-                </div>
-              </section>
-              
-              <style>
-                .slider {
-                    width: 100%;
-                    height: auto;
-                    margin: auto;
-                    overflow: hidden;
-                    position: relative;
-                }
-                
-                .slides {
-                    display: flex;
-                    width: 400%; /* 4 gambar */
-                    animation: slide 40s infinite;
-                }
-                
-                .slides img {
-                    width: 100%;
-                    height: auto;
-                }
-                
-                @keyframes slide {
-                    0% { transform: translateX(0); }
-                    25% { transform: translateX(-100%); }
-                    50% { transform: translateX(-200%); }
-                    75% { transform: translateX(-300%); }
-                    100% { transform: translateX(0); }
-                }
-                </style>
-        </nav>
+        <p>✨ Selamat datang di Beauty Salon – tempat di mana keindahan dan kenyamanan berpadu sempurna.<br>
+        Kami menghadirkan layanan premium mulai dari perawatan rambut, kuku, hingga tubuh, dengan sentuhan profesional stylist berpengalaman. Produk berkualitas tinggi & suasana hangat siap membuat Anda bersinar!</p>
     </header>
-    
 
-    <section id="services" class="services">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/5.jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="images/6.jpg" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="images/7.jpg" class="d-block w-100" alt="Slide 3">
+            </div>
+            <div class="carousel-item">
+                <img src="images/8.jpg" class="d-block w-100" alt="Slide 4">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <section class="services">
         <h2>Layanan Kami</h2>
-        <div class="service-list">
-            <div class="service-item">
-                <h3>Hair Cut</h3>
-                <p>Model rambut terbaik sesuai keinginan Anda.
-
-                </p>
-            </div>
-            <div class="service-item">
-                <h3>Nail Treatment</h3>
-                <p>Model dan perawatan kuku yang nyaman sesuai keingingnan anda.</p>
-            </div>
-            <div class="service-item">
-                <h3>Body Treatment</h3>
-                <p>Perawatan tangan dan kaki yang nyaman.</p>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <h4>Hair Cut</h4>
+                        <p>Model rambut terbaik sesuai keinginan Anda.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <h4>Nail Treatment</h4>
+                        <p>Perawatan dan seni kuku elegan sesuai gaya Anda.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <h4>Body Treatment</h4>
+                        <p>Relaksasi dan kenyamanan untuk tubuh Anda.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="booking" class="booking">
-
-    <br><br><h2>Registrasi Booking</h2>
+    <section class="booking">
+        <h2>Reservasi Booking</h2>
         <form>
             <label for="name">Nama:</label>
             <input type="text" id="name" required>
-            
-            <label for="date"><br><br>Tanggal:</br></br></label>
+
+            <label for="date">Tanggal:</label>
             <input type="date" id="date" required>
-            
-            <label for="service"><br><br>Layanan:</br></br></label>
+
+            <label for="service">Layanan:</label>
             <select id="service">
-                <option>Potong Rambut</option>
-                <option>Facial</option>
-                <option>Manicure & Pedicure</option>
+                <option>Hair Cut</option>
+                <option>Nail Art</option>
+                <option>Body Treatment</option>
             </select>
-            
+
             <button type="submit">Kirim</button>
         </form>
     </section>
 
-    
-
-    <footer id="contact">
-        <p>&copy; 2025 Salon Cantik | Kontak: 0812-3456-7890</p>
+    <footer>
+        <p>&copy; 2025 Beauty Salon | Kontak: 0812-3456-7890</p>
     </footer>
+
     <script>
-        let currentIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-      
-        function showSlide(index) {
-          slides.forEach((slide, i) => {
-            slide.classList.remove('active');
-            if (i === index) slide.classList.add('active');
-          });
-        }
-      
-        function nextSlide() {
-          currentIndex = (currentIndex + 1) % slides.length;
-          showSlide(currentIndex);
-        }
-      
-        showSlide(currentIndex);
-        setInterval(nextSlide, 100000); // Ganti slide tiap 20 detik
-      </script>
-      
+        const dateInput = document.getElementById('date');
+        const today = new Date();
+        const formatDate = (date) => {
+            const yyyy = date.getFullYear();
+            const mm = String(date.getMonth() + 1).padStart(2, '0');
+            const dd = String(date.getDate()).padStart(2, '0');
+            return `${yyyy}-${mm}-${dd}`;
+        };
+        const minDate = formatDate(today);
+        const hPlus7 = new Date();
+        hPlus7.setDate(today.getDate() + 7);
+        const maxDate = formatDate(hPlus7);
+        dateInput.min = minDate;
+        dateInput.max = maxDate;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
