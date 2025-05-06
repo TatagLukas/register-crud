@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Beauty Salon</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
@@ -14,7 +16,7 @@
         }
 
         header {
-            background-color: #D2B48C;
+            background-color:#D1C6B6;
             color: #333;
             padding: 40px 20px;
             text-align: center;
@@ -89,7 +91,7 @@
         .booking button {
             margin-top: 30px;
             padding: 10px 30px;
-            background-color: #D2B48C;
+            background-color:#D1C6B6;
             color: white;
             border: none;
             border-radius: 5px;
@@ -97,7 +99,7 @@
         }
 
         footer {
-            background-color: #D2B48C;
+            background-color:#D1C6B6;
             color: black;
             text-align: center;
             padding: 20px;
@@ -189,9 +191,49 @@
         </form>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Beauty Salon | Kontak: 0812-3456-7890 </p>
-    </footer>
+    <footer style="background-color: #D1C6B6; color: #4A3B32; padding: 40px 20px; font-family: 'Segoe UI', sans-serif;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto;">
+          
+          <!-- Deskripsi Brand -->
+          <div style="flex: 1 1 250px; margin-bottom: 20px;">
+            <h2 style="color: #4A3B32;">Beauty Salon</h2>
+            <p>Beauty Salon adalah tempat terbaik untuk perawatan modern dan elegan, menghadirkan suasana nyaman dengan pelayanan profesional.</p>
+            <div style="margin-top: 10px;">
+                <a href="#" style="color: #4A3B32; margin-right: 10px; font-size: 20px;"><i class="bi bi-facebook"></i></a>
+                <a href="#" style="color: #4A3B32; margin-right: 10px; font-size: 20px;"><i class="bi bi-instagram"></i></a>
+                <a href="#" style="color: #4A3B32; margin-right: 10px; font-size: 20px;"><i class="bi bi-whatsapp"></i></a>
+                <a href="#" style="color: #4A3B32; margin-right: 10px; font-size: 20px;"><i class="bi bi-tiktok"></i></a>
+                <a href="#" style="color: #4A3B32; margin-right: 10px; font-size: 20px;"><i class="bi bi-youtube"></i></a>
+              </div>
+              
+          </div>
+      
+          <!-- Info Perusahaan -->
+          <div style="flex: 1 1 150px; margin-bottom: 20px;">
+            <h4 style="color: #4A3B32;">COMPANY</h4>
+            <ul style="list-style: none; padding: 0;">
+              <li><a href="#" style="color: #4A3B32; text-decoration: none;">Tentang Kami</a></li>
+              <li><a href="#" style="color: #4A3B32; text-decoration: none;">Layanan</a></li>
+              <li><a href="#" style="color: #4A3B32; text-decoration: none;">Galeri</a></li>
+              <li><a href="#" style="color: #4A3B32; text-decoration: none;">Karier</a></li>
+            </ul>
+          </div>
+      
+          <!-- Kontak -->
+          <div style="flex: 1 1 200px; margin-bottom: 20px;">
+            <h4 style="color: #4A3B32;">SUPPORT</h4>
+            <p>📍 Jl. Anggrek No.123, Jakarta Selatan</p>
+            <p>📞 0812-3456-7890</p>
+            <p>📧 info@beautysalon.co.id</p>
+          </div>
+        </div>
+      
+        <!-- Footer bawah -->
+        <div style= "text-align: center; margin-top: 40px; color: #4A3B32;">
+        <p>© 2025 Beauty Salon | Dirancang dengan rasa oleh Tim Kreatif</p>
+        </div>
+      </footer>
+      
 
     <script>
         const dateInput = document.getElementById('date');
