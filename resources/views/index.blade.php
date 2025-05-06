@@ -139,24 +139,30 @@
 
     <section class="services">
         <h2>Layanan Kami</h2>
+        <p>Di Beauty Salon, kami menawarkan berbagai layanan perawatan kecantikan yang dirancang untuk memenuhi kebutuhan Anda. 
+           Setiap layanan dilakukan oleh profesional berpengalaman dengan produk berkualitas tinggi.</p>
+        <p>Berikut adalah beberapa layanan yang kami tawarkan:</p>
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="service-item">
                         <h4>Hair Cut</h4>
-                        <p>Model rambut terbaik sesuai keinginan Anda.</p>
+                        <p>Potongan rambut profesional yang disesuaikan dengan gaya dan karakter Anda. 
+                           Dapatkan tampilan terbaik yang segar dan stylish setiap kali berkunjung.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-item">
                         <h4>Nail Treatment</h4>
-                        <p>Perawatan dan seni kuku elegan sesuai gaya Anda.</p>
+                        <p>Perawatan dan seni kuku yang elegan, mulai dari manicure, pedicure, hingga nail art. 
+                           Bersih, sehat, dan cantik untuk tangan dan kaki yang memesona.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-item">
                         <h4>Body Treatment</h4>
-                        <p>Relaksasi dan kenyamanan untuk tubuh Anda.</p>
+                        <p>Relaksasi tubuh menyeluruh melalui layanan spa, pijat, dan body scrub. 
+                           Rasakan kenyamanan dan kesegaran yang menyeluruh di setiap sesi.</p>
                     </div>
                 </div>
             </div>
@@ -184,7 +190,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Beauty Salon | Kontak: 0812-3456-7890</p>
+        <p>&copy; 2025 Beauty Salon | Kontak: 0812-3456-7890 </p>
     </footer>
 
     <script>
