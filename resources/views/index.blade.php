@@ -3,29 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Captain Barbershop Clone</title>
+    <title>Beauty SalonBeauty Salon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
     <header class="bg-dark text-white text-center p-5">
-        <h1>Captain Barbershop</h1>
-        <p>Potong Rambut Premium untuk Pria Modern</p>
+        <h1>Beauty Salon</h1>
+        <p>Selamat datang di Beauty Salon, tempat perawatan kecantikan terbaik untuk Anda!</p>
+        <select name="ABOUT US" class="form-control mb-3" required>
+            <option value="">ABOUT US</option>
+            <option value="Story">Story</option>
+            <option value="Visi">Visi</option>
+            <option value="Misi">Misi</option>
+            <option value="Lokasi">Lokasi</option>
+        </select>
     </header>
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm px-5">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="{{ asset('images/logo-atmi.png') }}" alt="Logo" height="40" class="me-2">
+            <div>
+              <small style="font-size: 10px;">POLITEKNIK INDUSTRI</small><br>
+              <strong>ATMI</strong>
+            </div>
+          </a>
+      
+          <!-- Toggle button (responsive) -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <!-- Menu -->
+          <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 gap-3">
+              <li class="nav-item"><a class="nav-link fw-bold text-primary" href="#">HOME</a></li>
+              <li class="nav-item"><a class="nav-link fw-bold text-primary" href="#">ABOUT US</a></li>
+              <li class="nav-item"><a class="nav-link fw-bold text-primary" href="#">Beauty Academy</a></li>
+              <li class="nav-item"><a class="nav-link fw-bold text-primary" href="#">STORY</a></li>
+            </ul>
+          </div>
+      
+          <!-- Tombol Pendaftaran -->
+          <a href="#" class="btn btn-primary rounded-pill fw-bold">
+            login
+          </a>
+        </div>
+      </nav>
+      
+
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <img src="images/9.jpg" class="d-block w-100" alt="Slide 4">
+            </div>
+            <div class="carousel-item active">
+                <img src="images/5.jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="images/6.jpg" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="images/7.jpg" class="d-block w-100" alt="Slide 3">
+            </div>
+            <div class="carousel-item">
+                <img src="images/8.jpg" class="d-block w-100" alt="Slide 4">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
     <section class="container my-5">
         <h2 class="text-center">Layanan Kami</h2>
+        <p>Di Beauty Salon, kami menawarkan berbagai layanan perawatan kecantikan yang dirancang untuk memenuhi kebutuhan Anda. 
+           Setiap layanan dilakukan oleh profesional berpengalaman dengan produk berkualitas tinggi.</p>
+        <p>Berikut adalah beberapa layanan yang kami tawarkan:</p>
         <div class="row text-center mt-4">
             <div class="col-md-4">
                 <h4>Haircut</h4>
-                <p>Potongan gaya terkini</p>
+                <p>Potongan rambut profesional yang disesuaikan dengan gaya dan karakter Anda. 
+                   Dapatkan tampilan terbaik yang segar dan stylish setiap kali berkunjung.</p>
             </div>
             <div class="col-md-4">
-                <h4>Shaving</h4>
-                <p>Cukur bersih dan rapi</p>
+                <h4>Nail Treatment</h4>
+                <p>Perawatan dan seni kuku yang elegan, mulai dari manicure, pedicure, hingga nail art. 
+                   Bersih, sehat, dan cantik untuk tangan dan kaki yang memesona.</p>
             </div>
             <div class="col-md-4">
-                <h4>Massage</h4>
-                <p>Relaksasi kepala & leher</p>
+                <h4>Body Treatment</h4>
+                <p>Relaksasi tubuh menyeluruh melalui layanan spa, pijat, dan body scrub. 
+                   Rasakan kenyamanan dan kesegaran yang menyeluruh di setiap sesi.</p>
             </div>
         </div>
     </section>
@@ -46,8 +125,44 @@
         </form>
     </section>
 
+    <footer style="background-color: #D1C6B6; color: #4A3B32; padding: 40px 20px; font-family: 'Segoe UI', sans-serif;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto;">
+              <!-- Deskripsi Brand -->
+          <div style="flex: 1 1 250px; margin-bottom: 20px;">
+            <h2 style="color: #4A3B32;">Beauty Salon</h2>
+            <p>Beauty Salon adalah tempat terbaik untuk perawatan modern dan elegan, menghadirkan suasana nyaman dengan pelayanan profesional.</p>
+            <div style="margin-top: 10px;">
+                <a href="#" style="color: #4A3B32; margin-right: 10px; font-size: 20px;"><i class="bi bi-facebook"></i></a>
+                <a href="#" style="color: #4A3B32; margin-right: 10px; font-size: 20px;"><i class="bi bi-instagram"></i></a>
+                <a href="#" style="color: #4A3B32; margin-right: 10px; font-size: 20px;"><i class="bi bi-whatsapp"></i></a>
+                <a href="#" style="color: #4A3B32; margin-right: 10px; font-size: 20px;"><i class="bi bi-tiktok"></i></a>
+                <a href="#" style="color: #4A3B32; margin-right: 10px; font-size: 20px;"><i class="bi bi-youtube"></i></a>
+              </div>
+              
+          </div>
+      
+          <!-- Info Perusahaan -->
+          <div style="flex: 1 1 150px; margin-bottom: 20px;">
+            <h4 style="color: #4A3B32;">COMPANY</h4>
+            <ul style="list-style: none; padding: 0;">
+              <li><a href="#" style="color: #4A3B32; text-decoration: none;">Tentang Kami</a></li>
+              <li><a href="#" style="color: #4A3B32; text-decoration: none;">Layanan</a></li>
+              <li><a href="#" style="color: #4A3B32; text-decoration: none;">Galeri</a></li>
+              <li><a href="#" style="color: #4A3B32; text-decoration: none;">Karier</a></li>
+            </ul>
+          </div>
+      
+          <!-- Kontak -->
+          <div style="flex: 1 1 200px; margin-bottom: 20px;">
+            <h4 style="color: #4A3B32;">SUPPORT</h4>
+            <p>📍 Jl. Anggrek No.123, Jakarta Selatan</p>
+            <p>📞 0812-3456-7890</p>
+            <p>📧 info@beautysalon.co.id</p>
+          </div>
+        </div>
+
     <footer class="bg-dark text-white text-center p-3">
-        <p>© 2025 Captain Barbershop. All rights reserved.</p>
+        <p>© 2025 Beauty Salon | All rights reserved.</p>
     </footer>
 
     <?php
