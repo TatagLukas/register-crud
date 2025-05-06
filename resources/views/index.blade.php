@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const date = document.getElementById('date').value;
+            const service = document.getElementById('service').value;
+        
+            console.log({ name, phone, date, service });
+            alert('Terima kasih! Reservasi Anda sudah dicatat.');
+        }
+        </script>
     <style>
         body {
             font-family:  'Poppins', sans-serif;
@@ -174,22 +186,30 @@
 
     <section class="booking">
         <h2>Reservasi Booking</h2>
-        <form>
+        
+        <form action="sendmail.php" method="POST">
             <label for="name">Nama:</label>
-            <input type="text" id="name" required>
-
+            <input type="text" id="name" name="name" required>
+        
+            <label for="phone">No. Handphone:</label>
+            <input type="tel" id="phone" name="phone" required>
+        
             <label for="date">Tanggal:</label>
-            <input type="date" id="date" required>
-
+            <input type="date" id="date" name="date" required>
+        
             <label for="service">Layanan:</label>
-            <select id="service">
-                <option>Hair Cut</option>
-                <option>Nail Art</option>
-                <option>Body Treatment</option>
+            <select id="service" name="service" required>
+                <option value="">-- Pilih Layanan --</option>
+                <option value="Hair Cut">Hair Cut</option>
+                <option value="Nail Art">Nail Art</option>
+                <option value="Body Treatment">Body Treatment</option>
             </select>
-
+        
             <button type="submit">Kirim</button>
         </form>
+        
+
+            
     </section>
 
     <footer style="background-color: #D1C6B6; color: #4A3B32; padding: 40px 20px; font-family: 'Segoe UI', sans-serif;">
