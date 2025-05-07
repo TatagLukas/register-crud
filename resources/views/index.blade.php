@@ -29,14 +29,14 @@
 =======
         <h1>Salon Beauty</h1>
         <p>Potong Rambut Premium untuk Pria Modern</p>
->>>>>>> 2f72f0aa4a8350fe48a46dfed8d221996eeab8e4
+
     </header>
 
     <nav class="navbar navbar-expand-lg bg-white shadow-sm px-5">
         <div class="container-fluid">
           <!-- Logo -->
           <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="{{ asset('images/logo-atmi.png') }}" alt="Logo" height="40" class="me-2">
+            <img src="{{ asset('database/migrations/WhatsApp Image 2025-05-07 at 13.19.39_01779e08.jpg') }}" alt="Logo" height="40" class="me-2">
             <div>
               <small style="font-size: 10px;">POLITEKNIK INDUSTRI</small><br>
               <strong>ATMI</strong>
