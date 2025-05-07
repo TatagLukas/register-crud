@@ -36,10 +36,7 @@
         <div class="container-fluid">
           <!-- Logo -->
           <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="{{ asset('database/migrations/WhatsApp Image 2025-05-07 at 13.19.39_01779e08.jpg') }}" alt="Logo" height="40" class="me-2">
-            <div>
-              <small style="font-size: 10px;">POLITEKNIK INDUSTRI</small><br>
-              <strong>ATMI</strong>
+              <strong>Salon Beauty</strong>
             </div>
           </a>
       
