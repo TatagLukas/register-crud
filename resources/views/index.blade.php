@@ -3,64 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Beauty SalonBeauty Salon</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <title>Salon Beauty Clone</title>
+
+    <title>Beauty Salon</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
 </head>
 <body>
+    <style>
+        body {
+          font-family: 'Segoe UI', sans-serif;
+          scroll-behavior: smooth;
+        }
+      
+        h2 {
+          color: #8E5A51;
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+      
+        .navbar-brand img {
+          border-radius: 50%;
+        }
+      
+        .carousel-item img {
+          height: 500px;
+          object-fit: cover;
+        }
+      
+        footer a:hover {
+          text-decoration: underline;
+        }
+      </style>
+      
     <header class="bg-dark text-white text-center p-5">
+
         <h1>Beauty Salon</h1>
         <p>Selamat datang di Beauty Salon, tempat perawatan kecantikan terbaik untuk Anda!</p>
-        <select name="ABOUT US" class="form-control mb-3" required>
-            <option value="">ABOUT US</option>
-            <option value="Story">Story</option>
-            <option value="Visi">Visi</option>
-            <option value="Misi">Misi</option>
-            <option value="Lokasi">Lokasi</option>
+        
         </select>
+        
+
     </header>
 
     <nav class="navbar navbar-expand-lg bg-white shadow-sm px-5">
         <div class="container-fluid">
           <!-- Logo -->
           <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="{{ asset('images/logo-atmi.png') }}" alt="Logo" height="40" class="me-2">
-            <div>
-              <small style="font-size: 10px;">POLITEKNIK INDUSTRI</small><br>
-              <strong>ATMI</strong>
-            </div>
+            <img src="images/download (5).jpg" alt="Logo" height="40" class="me-2">
           </a>
+          
       
           <!-- Toggle button (responsive) -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
             <span class="navbar-toggler-icon"></span>
           </button>
       
-          <!-- Menu -->
-          <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
-            <ul class="navbar-nav mb-2 mb-lg-0 gap-3">
-              <li class="nav-item"><a class="nav-link fw-bold text-primary" href="#">HOME</a></li>
-              <li class="nav-item"><a class="nav-link fw-bold text-primary" href="#">ABOUT US</a></li>
-              <li class="nav-item"><a class="nav-link fw-bold text-primary" href="#">Beauty Academy</a></li>
-              <li class="nav-item"><a class="nav-link fw-bold text-primary" href="#">STORY</a></li>
-            </ul>
-          </div>
-      
-          <!-- Tombol Pendaftaran -->
-          <a href="#" class="btn btn-primary rounded-pill fw-bold">
-            login
-          </a>
         </div>
       </nav>
       
+      <style>
+    .carousel-inner img {
+        height: 500px; /* Atur tinggi sesuai kebutuhan */
+        object-fit: cover; /* Atau gunakan 'contain' jika ingin seluruh gambar terlihat */
+        width: 100%;
+    }
+
+    /* Optional: Membuat carousel responsif di layar kecil */
+    @media (max-width: 768px) {
+        .carousel-inner img {
+            height: 300px;
+        }
+    }
+</style>
+
 
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item">
-                <img src="images/a.jpg" class="d-block w-100" alt="Slide 4">
+                <img src="images/9.jpg" class="d-block w-100" alt="Slide 4">
             </div>
             <div class="carousel-item active">
                 <img src="images/5.jpg" class="d-block w-100" alt="Slide 1">
@@ -86,28 +113,74 @@
     </div>
 
     <section class="container my-5">
-        <h2 class="text-center">Layanan Kami</h2>
-        <p>Di Beauty Salon, kami menawarkan berbagai layanan perawatan kecantikan yang dirancang untuk memenuhi kebutuhan Anda. 
-           Setiap layanan dilakukan oleh profesional berpengalaman dengan produk berkualitas tinggi.</p>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+        <h2 class="animate__animated animate__fadeInUp">Layanan Kami:</h2>
+    
+        <p>
+            Di Beauty Salon, kami menawarkan berbagai layanan perawatan kecantikan yang dirancang untuk memenuhi kebutuhan Anda.
+            Setiap layanan dilakukan oleh profesional berpengalaman dengan produk berkualitas tinggi.
+        </p>
         <p>Berikut adalah beberapa layanan yang kami tawarkan:</p>
-        <div class="row text-center mt-4">
-            <div class="col-md-4">
-                <h4>Haircut</h4>
-                <p>Potongan rambut profesional yang disesuaikan dengan gaya dan karakter Anda. 
-                   Dapatkan tampilan terbaik yang segar dan stylish setiap kali berkunjung.</p>
+    
+        
+            <div class="row text-center mt-4">
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <h4>Haircut</h4>
+                        <p>
+                            Potongan rambut profesional yang disesuaikan dengan gaya dan karakter Anda.
+                            Dapatkan tampilan terbaik yang segar dan stylish setiap kali berkunjung.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <h4>Nail Treatment</h4>
+                        <p>
+                            Perawatan dan seni kuku yang elegan, mulai dari manicure, pedicure, hingga nail art.
+                            Bersih, sehat, dan cantik untuk tangan dan kaki yang memesona.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <h4>Body Treatment</h4>
+                        <p>
+                            Relaksasi tubuh menyeluruh melalui layanan spa, pijat, dan body scrub.
+                            Rasakan kenyamanan dan kesegaran yang menyeluruh di setiap sesi.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <h4>Nail Treatment</h4>
-                <p>Perawatan dan seni kuku yang elegan, mulai dari manicure, pedicure, hingga nail art. 
-                   Bersih, sehat, dan cantik untuk tangan dan kaki yang memesona.</p>
+        </section>
+        
+        <style>
+            .service-box {
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                padding: 20px;
+                margin-bottom: 20px;
+                background-color: #f9f9f9;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+        
+            .service-box h4 {
+                margin-bottom: 15px;
+                font-size: 1.25rem;
+                color: #333;
+            }
+        
+            .service-box p {
+                color: #666;
+                font-size: 1rem;
+            }
+        </style>
+        
             </div>
-            <div class="col-md-4">
-                <h4>Body Treatment</h4>
-                <p>Relaksasi tubuh menyeluruh melalui layanan spa, pijat, dan body scrub. 
-                   Rasakan kenyamanan dan kesegaran yang menyeluruh di setiap sesi.</p>
-            </div>
-        </div>
+        
     </section>
+    
 
     <section class="bg-light py-5 text-center">
         <h2>Reservasi Sekarang</h2>
@@ -118,8 +191,8 @@
             <select name="layanan" class="form-control mb-3" required>
                 <option value="">-- Pilih Layanan --</option>
                 <option value="Haircut">Haircut</option>
-                <option value="Shaving">Shaving</option>
-                <option value="Massage">Massage</option>
+                <option value="Shaving">Nail Art</option>
+                <option value="Massage">Body Massage</option>
             </select>
             <button class="btn btn-dark w-100">Kirim Reservasi</button>
         </form>
