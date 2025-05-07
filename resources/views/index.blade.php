@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Beauty SalonBeauty Salon</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+=======
+    <title>Salon Beauty Clone</title>
+>>>>>>> 2f72f0aa4a8350fe48a46dfed8d221996eeab8e4
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
     <header class="bg-dark text-white text-center p-5">
+<<<<<<< HEAD
         <h1>Beauty Salon</h1>
         <p>Selamat datang di Beauty Salon, tempat perawatan kecantikan terbaik untuk Anda!</p>
         <select name="ABOUT US" class="form-control mb-3" required>
@@ -21,6 +26,10 @@
             <option value="Misi">Misi</option>
             <option value="Lokasi">Lokasi</option>
         </select>
+=======
+        <h1>Salon Beauty</h1>
+        <p>Potong Rambut Premium untuk Pria Modern</p>
+>>>>>>> 2f72f0aa4a8350fe48a46dfed8d221996eeab8e4
     </header>
 
     <nav class="navbar navbar-expand-lg bg-white shadow-sm px-5">
