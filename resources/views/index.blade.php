@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="bg-dark text-white text-center p-5">
-        <h1>Captain Barbershop</h1>
+        <h1>Salon Beauty</h1>
         <p>Potong Rambut Premium untuk Pria Modern</p>
     </header>
 
