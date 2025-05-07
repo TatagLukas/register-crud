@@ -68,6 +68,21 @@
         </div>
       </nav>
       
+      <style>
+    .carousel-inner img {
+        height: 500px; /* Atur tinggi sesuai kebutuhan */
+        object-fit: cover; /* Atau gunakan 'contain' jika ingin seluruh gambar terlihat */
+        width: 100%;
+    }
+
+    /* Optional: Membuat carousel responsif di layar kecil */
+    @media (max-width: 768px) {
+        .carousel-inner img {
+            height: 300px;
+        }
+    }
+</style>
+
 
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
