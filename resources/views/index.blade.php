@@ -45,7 +45,7 @@
     <header class="bg-dark text-white text-center p-5">
 
         <h1>Beauty Salon</h1>
-        <p>Selamat datang di Beauty Salon, tempat perawatan kecantikan terbaik untuk Anda!</p>
+        <p>Selamat datang di Beauty Salon, tempat perawatan kecantikan terbaik untuk Anda! test</p>
         
         </select>
         
