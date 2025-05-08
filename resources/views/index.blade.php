@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tanggal = $_POST['tanggal'];
     $layanan = $_POST['layanan'];
 
-    $to = "pabbloz06@gmail.com";  // Ganti dengan email pemilik
+
     $subject = "Reservasi Baru di Beauty Salon";
 
     $message = "
@@ -108,7 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <header class="bg-dark text-white text-center p-5">
 
         <h1>Beauty Salon</h1>
-        <form class="container mt-4" style="max-width: 500px;" method="POST" action="{{ route('reservasi.simpan') }}">
+        
             @csrf
         
         <p>Selamat datang di Beauty Salon, tempat perawatan kecantikan terbaik untuk Anda!</p>
@@ -240,21 +240,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </section>
     
 
-    <section class="bg-light py-5 text-center">
-        <h2>Reservasi Sekarang</h2>
-        <form class="container mt-4" style="max-width: 500px;" method="POST" action="">
-            <input type="text" name="nama" class="form-control mb-3" placeholder="Nama" required>
-            <input type="tel" name="phone" class="form-control mb-3" placeholder="Nomor Telepon" required>
-            <input type="date" name="tanggal" class="form-control mb-3" required>
-            <select name="layanan" class="form-control mb-3" required>
-                <option value="">-- Pilih Layanan --</option>
-                <option value="Haircut">Haircut</option>
-                <option value="Nail Art">Nail Art</option>
-                <option value="Body Massage">Body Massage</option>
-            </select>
-            <button class="btn btn-dark w-100">Kirim Reservasi</button>
-        </form>
-    </section>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="text-center mb-4" style="color: #8E5A51;">Reservasi Sekarang</h2>
+                <form action="reservasi.php" method="post">
+                    <div class="mb-3">
+                        <label for="nama" class="form-label">Nama</label>
+                        <input type="text" name="nama" id="nama" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telepon" class="form-label">Nomor Telepon</label>
+                        <input type="text" name="telepon" id="telepon" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tanggal" class="form-label">Tanggal Reservasi</label>
+                        <input type="date" name="tanggal" id="tanggal" class="form-control" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="layanan" class="form-label">Pilih Layanan</label>
+                        <select name="layanan" id="layanan" class="form-select" required>
+                            <option value="">-- Pilih Layanan --</option>
+                            <option value="Cuci Rambut">Cuci Rambut</option>
+                            <option value="Potong Rambut">Potong Rambut</option>
+                            <option value="Pewarnaan Rambut">Pewarnaan Rambut</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100">Kirim Reservasi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
     
     <?php if ($status === "success"): ?>
     <script>
@@ -333,7 +350,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p>© 2025 Beauty Salon | All rights reserved.</p>
     </footer>
 
-    
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </body>
+
 
 </html>
