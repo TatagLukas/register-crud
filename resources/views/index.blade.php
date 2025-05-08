@@ -1,5 +1,5 @@
 <?php
-$status = ""; // untuk menyimpan status hasil kirim email
+$status = null; // Inisialisasi variabel status
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama = $_POST['nama'];
@@ -24,8 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $headers = "MIME-Version: 1.0\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8\r\n";
-    $headers .= "From: noreply@beautysalon.com\r\n"; // Ubah sesuai kebutuhan
+    $headers .= "From: reservasi@beautysalon.co.id\r\n";
 
+    // Kirim email
     if (mail($to, $subject, $message, $headers)) {
         $status = "success";
     } else {
@@ -33,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
 
 
 <!DOCTYPE html>
@@ -52,7 +54,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 </head>
 
@@ -81,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <style>
         body {
           font-family: 'Segoe UI', sans-serif;
-          scroll-behavior: smooth;
+          scroll-behavior: smooth;   
         }
       
         h2 {
@@ -238,29 +241,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <section class="bg-light py-5 text-center">
         <h2>Reservasi Sekarang</h2>
-        <form class="container mt-4" style="max-width: 500px;" method="POST" action="sendmail.php">
+        <form class="container mt-4" style="max-width: 500px;" method="POST" action="">
             <input type="text" name="nama" class="form-control mb-3" placeholder="Nama" required>
             <input type="tel" name="phone" class="form-control mb-3" placeholder="Nomor Telepon" required>
             <input type="date" name="tanggal" class="form-control mb-3" required>
             <select name="layanan" class="form-control mb-3" required>
                 <option value="">-- Pilih Layanan --</option>
                 <option value="Haircut">Haircut</option>
-                <option value="Shaving">Nail Art</option>
-                <option value="Massage">Body Massage</option>
+                <option value="Nail Art">Nail Art</option>
+                <option value="Body Massage">Body Massage</option>
             </select>
             <button class="btn btn-dark w-100">Kirim Reservasi</button>
         </form>
-
-        <form ...>
-            <?php if ($status === "success"): ?>
-    <div class="alert alert-success mt-3" role="alert">
-        Reservasi berhasil dikirim! Terima kasih atas pemesanan Anda.
-    </div>
-<?php elseif ($status === "error"): ?>
-    <div class="alert alert-danger mt-3" role="alert">
-        Maaf, terjadi kesalahan saat mengirim reservasi. Silakan coba lagi nanti.
-    </div>
-<?php endif; ?>
+    </section>
+    
+    <?php if ($status === "success"): ?>
+    <script>
+    Swal.fire({
+        icon: 'success',
+        title: 'Reservasi Berhasil!',
+        text: 'Terima kasih, reservasi Anda telah kami terima.',
+        confirmButtonColor: '#8E5A51'
+    });
+    </script>
+    <?php elseif ($status === "error"): ?>
+    <script>
+    Swal.fire({
+        icon: 'error',
+        title: 'Gagal Mengirim!',
+        text: 'Maaf, terjadi kesalahan saat mengirim reservasi.',
+        confirmButtonColor: '#8E5A51'
+    });
+    </script>
+    <?php endif; ?>
+    
 
         </form>
         
