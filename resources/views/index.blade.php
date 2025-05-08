@@ -10,7 +10,7 @@
 
     <title>Salon Beauty Clone</title>
 
-    <title>Beauty </title>
+    <title>Beauty</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
@@ -54,19 +54,11 @@
 
     <nav class="navbar navbar-expand-lg bg-white shadow-sm px-5">
         <div class="container-fluid">
-          <--Logo-->
           <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="images/download (5).jpg" alt="Logo" height="40" class="me-2">
+            <img src="images/download (5).jpg" alt="Logo" height="60" class="me-2">
           </a>
-          
-      
-          <!-- Toggle button (responsive) -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
         </div>
-      </nav>
+    </nav>
       
       <style>
     .carousel-inner img {
