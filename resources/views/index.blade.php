@@ -45,7 +45,7 @@
     <header class="bg-dark text-white text-center p-5">
 
         <h1>Beauty Salon</h1>
-        <p>Selamat datang di Beauty Salon, tempat perawatan kecantikan terbaik untuk Anda!</p>
+        <p>Selamat datang di Beauty Salon, tempat perawatan kecantikan untuk Anda!</p>
         
         </select>
         
@@ -54,7 +54,7 @@
 
     <nav class="navbar navbar-expand-lg bg-white shadow-sm px-5">
         <div class="container-fluid">
-          <!-- Logo -->
+          <--Logo-->
           <a class="navbar-brand d-flex align-items-center" href="#">
             <img src="images/download (5).jpg" alt="Logo" height="40" class="me-2">
           </a>
