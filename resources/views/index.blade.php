@@ -1,3 +1,40 @@
+<?php
+$status = ""; // untuk menyimpan status hasil kirim email
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nama = $_POST['nama'];
+    $phone = $_POST['phone'];
+    $tanggal = $_POST['tanggal'];
+    $layanan = $_POST['layanan'];
+
+    $to = "pabbloz06@gmail.com";  // Ganti dengan email pemilik
+    $subject = "Reservasi Baru di Beauty Salon";
+
+    $message = "
+    <html>
+    <head><title>Reservasi Baru</title></head>
+    <body>
+        <h2>Reservasi Baru</h2>
+        <p><strong>Nama:</strong> $nama</p>
+        <p><strong>Nomor Telepon:</strong> $phone</p>
+        <p><strong>Tanggal Reservasi:</strong> $tanggal</p>
+        <p><strong>Layanan yang Dipilih:</strong> $layanan</p>
+    </body>
+    </html>";
+
+    $headers = "MIME-Version: 1.0\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8\r\n";
+    $headers .= "From: noreply@beautysalon.com\r\n"; // Ubah sesuai kebutuhan
+
+    if (mail($to, $subject, $message, $headers)) {
+        $status = "success";
+    } else {
+        $status = "error";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -14,7 +51,32 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
+
+<?php if ($status === "success"): ?>
+<script>
+    Swal.fire({
+        icon: 'success',
+        title: 'Reservasi Berhasil!',
+        text: 'Terima kasih, reservasi Anda telah kami terima.',
+        confirmButtonColor: '#8E5A51'
+    });
+</script>
+<?php elseif ($status === "error"): ?>
+<script>
+    Swal.fire({
+        icon: 'error',
+        title: 'Gagal Mengirim!',
+        text: 'Maaf, terjadi kesalahan saat mengirim reservasi.',
+        confirmButtonColor: '#8E5A51'
+    });
+</script>
+<?php endif; ?>
+
+
 <body>
     <style>
         body {
@@ -188,6 +250,32 @@
             </select>
             <button class="btn btn-dark w-100">Kirim Reservasi</button>
         </form>
+
+        <form ...>
+            <?php if ($status === "success"): ?>
+    <div class="alert alert-success mt-3" role="alert">
+        Reservasi berhasil dikirim! Terima kasih atas pemesanan Anda.
+    </div>
+<?php elseif ($status === "error"): ?>
+    <div class="alert alert-danger mt-3" role="alert">
+        Maaf, terjadi kesalahan saat mengirim reservasi. Silakan coba lagi nanti.
+    </div>
+<?php endif; ?>
+
+        </form>
+        
+        <!-- Tambahkan pesan status di sini -->
+        <?php if ($status === "success"): ?>
+            <div class="alert alert-success mt-3" role="alert">
+                Reservasi berhasil dikirim! Terima kasih atas pemesanan Anda.
+            </div>
+        <?php elseif ($status === "error"): ?>
+            <div class="alert alert-danger mt-3" role="alert">
+                Maaf, terjadi kesalahan saat mengirim reservasi. Silakan coba lagi nanti.
+            </div>
+        <?php endif; ?>
+        
+
     </section>
 
     <footer style="background-color: #D1C6B6; color: #4A3B32; padding: 40px 20px; font-family: 'Segoe UI', sans-serif;">
@@ -230,50 +318,7 @@
         <p>© 2025 Beauty Salon | All rights reserved.</p>
     </footer>
 
-    <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Mendapatkan data dari form
-    $nama = $_POST['nama'];
-    $phone = $_POST['phone'];
-    $tanggal = $_POST['tanggal'];
-    $layanan = $_POST['layanan'];
-
-    // Email tujuan (pemilik barbershop)
-    $to = "pabbloz06@gmail.com";  // Ganti dengan email pemilik barbershop
-
-    // Subjek email
-    $subject = "Reservasi Baru di Captain Barbershop";
-
-    // Pesan email
-    $message = "
-    <html>
-    <head>
-    <title>Reservasi Baru</title>
-    </head>
-    <body>
-    <h2>Reservasi Baru</h2>
-    <p><strong>Nama:</strong> $nama</p>
-    <p><strong>Nomor Telepon:</strong> $phone</p>
-    <p><strong>Tanggal Reservasi:</strong> $tanggal</p>
-    <p><strong>Layanan yang Dipilih:</strong> $layanan</p>
-    </body>
-    </html>
-    ";
-
-    // Header email
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= "From: noreply@captainbarbershop.com" . "\r\n"; // Ganti dengan alamat email yang valid
-
-    // Mengirim email
-    if (mail($to, $subject, $message, $headers)) {
-        echo "<p>Reservasi berhasil dikirim! Terima kasih atas pemesanan Anda.</p>";
-    } else {
-        echo "<p>Maaf, terjadi kesalahan dalam pengiriman reservasi.</p>";
-    }
-}
-?>
-
+    
 </body>
 
 </html>
