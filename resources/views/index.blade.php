@@ -312,46 +312,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <footer style="background-color: #D1C6B6; color: #4A3B32; padding: 40px 20px; font-family: 'Segoe UI', sans-serif;">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto;">
-              <!-- Deskripsi Brand -->
-          <div style="flex: 1 1 250px; margin-bottom: 20px;">
-            <h2 style="color: #4A3B32;">Beauty Salon</h2>
-            <p>Beauty Salon adalah tempat terbaik untuk perawatan modern dan elegan, menghadirkan suasana nyaman dengan pelayanan profesional.</p>
-            <div style="margin-top: 10px;">
-                <a href="#" style="color: #4A3B32; margin-right: 10px; font-size: 20px;"><i class="bi bi-facebook"></i></a>
-                <a href="#" style="color: #4A3B32; margin-right: 10px; font-size: 20px;"><i class="bi bi-instagram"></i></a>
-                <a href="#" style="color: #4A3B32; margin-right: 10px; font-size: 20px;"><i class="bi bi-whatsapp"></i></a>
-                <a href="#" style="color: #4A3B32; margin-right: 10px; font-size: 20px;"><i class="bi bi-tiktok"></i></a>
-                <a href="#" style="color: #4A3B32; margin-right: 10px; font-size: 20px;"><i class="bi bi-youtube"></i></a>
-              </div>
-              
-          </div>
-      
-          <!-- Info Perusahaan -->
-          <div style="flex: 1 1 150px; margin-bottom: 20px;">
-            <h4 style="color: #4A3B32;">COMPANY</h4>
-            <ul style="list-style: none; padding: 0;">
-              <li><a href="#" style="color: #4A3B32; text-decoration: none;">Tentang Kami</a></li>
-              <li><a href="#" style="color: #4A3B32; text-decoration: none;">Layanan</a></li>
-              <li><a href="#" style="color: #4A3B32; text-decoration: none;">Galeri</a></li>
-              <li><a href="#" style="color: #4A3B32; text-decoration: none;">Karier</a></li>
-            </ul>
-          </div>
-      
-          <!-- Kontak -->
-          <div style="flex: 1 1 200px; margin-bottom: 20px;">
-            <h4 style="color: #4A3B32;">SUPPORT</h4>
-            <p>📍 Jl. Anggrek No.123, Jakarta Selatan</p>
-            <p>📞 0812-3456-7890</p>
-            <p>📧 info@beautysalon.co.id</p>
-          </div>
+            <!-- Deskripsi Brand -->
+            <div style="flex: 1 1 250px; margin-bottom: 20px;">
+                <h2 style="color: #4A3B32;">Beauty Salon</h2>
+                <p>Beauty Salon adalah tempat terbaik untuk perawatan modern dan elegan, menghadirkan suasana nyaman dengan pelayanan profesional.</p>
+                <!-- Media Sosial -->
+                <div style="margin-top: 10px;">
+                    <a href="https://www.instagram.com/moir.salon?igsh=MWJyeWd3czcwcTgzcg==" target="_blank" style="color: #4A3B32; margin-right: 10px; font-size: 20px;">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@moir.salon" target="_blank" style="color: #4A3B32; margin-right: 10px; font-size: 20px;">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@Moirsalon/shorts" target="_blank" style="color: #4A3B32; margin-right: 10px; font-size: 20px;">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Info Perusahaan -->
+            <div style="flex: 1 1 150px; margin-bottom: 20px;">
+                <h4 style="color: #4A3B32;">COMPANY</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="#" style="color: #4A3B32; text-decoration: none;">Tentang Kami</a></li>
+                    <li><a href="#" style="color: #4A3B32; text-decoration: none;">Layanan</a></li>
+                    <li><a href="#" style="color: #4A3B32; text-decoration: none;">Galeri</a></li>
+                    <li><a href="#" style="color: #4A3B32; text-decoration: none;">Karier</a></li>
+                </ul>
+            </div>
+    
+            <!-- Kontak -->
+            <div style="flex: 1 1 200px; margin-bottom: 20px;">
+                <h4 style="color: #4A3B32;">SUPPORT</h4>
+                <p>📍 Jl. Anggrek No.123, Jakarta Selatan</p>
+                <p>📞 0812-3456-7890</p>
+                <p>📧 info@beautysalon.co.id</p>
+            </div>
         </div>
-
-    <footer class="bg-dark text-white text-center p-3">
-        <p>© 2025 Beauty Salon | All rights reserved.</p>
+    
+        <footer class="bg-dark text-white text-center p-3">
+            <p>© 2025 Beauty Salon | All rights reserved.</p>
+        </div>
     </footer>
-
-    <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </body>
 
