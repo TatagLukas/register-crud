@@ -55,8 +55,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
 </head>
 
 <?php if ($status === "success"): ?>
@@ -110,6 +108,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <header class="bg-dark text-white text-center p-5">
 
         <h1>Beauty Salon</h1>
+        <form class="container mt-4" style="max-width: 500px;" method="POST" action="{{ route('reservasi.simpan') }}">
+            @csrf
+        
         <p>Selamat datang di Beauty Salon, tempat perawatan kecantikan terbaik untuk Anda!</p>
         
         </select>
