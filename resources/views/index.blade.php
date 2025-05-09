@@ -128,12 +128,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       
       <style>
     .carousel-inner img {
-        height: 500px; /* Atur tinggi sesuai kebutuhan */
-        object-fit: cover; /* Atau gunakan 'contain' jika ingin seluruh gambar terlihat */
+        height: 500px; 
+        object-fit: cover; 
         width: 100%;
     }
 
-    /* Optional: Membuat carousel responsif di layar kecil */
+    
     @media (max-width: 768px) {
         .carousel-inner img {
             height: 300px;
@@ -244,26 +244,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h2 class="text-center mb-4" style="color: #8E5A51;">Reservasi Sekarang</h2>
-                <form action="reservasi.php" method="post">
+                <form action="{{ route('reservations.store') }}" method="POST" id="reservationForm">
+                    @csrf
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
-                        <input type="text" name="nama" id="nama" class="form-control" required>
+                        <input type="text" name="name" id="nama" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <label for="telepon" class="form-label">Nomor Telepon</label>
-                        <input type="text" name="telepon" id="telepon" class="form-control" required>
+                        <input type="number" name="number" id="telepon" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <label for="tanggal" class="form-label">Tanggal Reservasi</label>
-                        <input type="date" name="tanggal" id="tanggal" class="form-control" required>
+                        <input type="date" name="reservation_date" id="tanggal" class="form-control" required>
                     </div>
                     <div class="mb-4">
                         <label for="layanan" class="form-label">Pilih Layanan</label>
-                        <select name="layanan" id="layanan" class="form-select" required>
+                        <select name="service" id="layanan" class="form-select" required>
                             <option value="">-- Pilih Layanan --</option>
-                            <option value="Cuci Rambut">Cuci Rambut</option>
-                            <option value="Potong Rambut">Potong Rambut</option>
-                            <option value="Pewarnaan Rambut">Pewarnaan Rambut</option>
+                            <option value="Hair Cut">Hair Cut</option>
+                            <option value="Nail Treatment">Nail Treatment</option>
+                            <option value="Body Treatment">Body Treatment</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-dark w-100">Kirim Reservasi</button>
@@ -317,29 +318,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h2 style="color: #4A3B32;">Beauty Salon</h2>
                 <p>Beauty Salon adalah tempat terbaik untuk perawatan modern dan elegan, menghadirkan suasana nyaman dengan pelayanan profesional.</p>
                 <!-- Media Sosial -->
-                <div style="margin-top: 10px;">
-                    <a href="https://www.instagram.com/moir.salon?igsh=MWJyeWd3czcwcTgzcg==" target="_blank" style="color: #4A3B32; margin-right: 10px; font-size: 20px;">
-                        <i class="bi bi-instagram"></i>
+                <div style="margin-top: 10px; display: flex; gap: 15px; align-items: center;">
+                    <a href="https://www.instagram.com/moir.salon?igsh=MWJyeWd3czcwcTgzcg==" target="_blank" style="color: #4A3B32; text-decoration: none; font-size: 18px; display: flex; align-items: center; gap: 5px;">
+                        <i class="bi bi-instagram" style="font-size: 20px;"></i> moir.salon
                     </a>
-                    <a href="https://www.tiktok.com/@moir.salon" target="_blank" style="color: #4A3B32; margin-right: 10px; font-size: 20px;">
-                        <i class="bi bi-tiktok"></i>
+                    <a href="https://www.tiktok.com/@moir.salon" target="_blank" style="color: #4A3B32; text-decoration: none; font-size: 18px; display: flex; align-items: center; gap: 5px;">
+                        <i class="bi bi-tiktok" style="font-size: 20px;"></i> moir.salon
                     </a>
-                    <a href="https://www.youtube.com/@Moirsalon/shorts" target="_blank" style="color: #4A3B32; margin-right: 10px; font-size: 20px;">
-                        <i class="bi bi-youtube"></i>
+                    <a href="https://www.youtube.com/@Moirsalon/shorts" target="_blank" style="color: #4A3B32; text-decoration: none; font-size: 18px; display: flex; align-items: center; gap: 5px;">
+                        <i class="bi bi-youtube" style="font-size: 20px;"></i> Moir Salon
                     </a>
                 </div>
+                
             </div>
     
-            <!-- Info Perusahaan -->
-            <div style="flex: 1 1 150px; margin-bottom: 20px;">
-                <h4 style="color: #4A3B32;">COMPANY</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="#" style="color: #4A3B32; text-decoration: none;">Tentang Kami</a></li>
-                    <li><a href="#" style="color: #4A3B32; text-decoration: none;">Layanan</a></li>
-                    <li><a href="#" style="color: #4A3B32; text-decoration: none;">Galeri</a></li>
-                    <li><a href="#" style="color: #4A3B32; text-decoration: none;">Karier</a></li>
-                </ul>
-            </div>
+        
     
             <!-- Kontak -->
             <div style="flex: 1 1 200px; margin-bottom: 20px;">
@@ -354,6 +347,71 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>© 2025 Beauty Salon | All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('reservationForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission
+    
+            const form = this;
+            const formData = new FormData(form);
+    
+            fetch(form.action, {
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
+                },
+                body: formData,
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success',
+                        text: data.success,
+                        confirmButtonColor: '#8E5A51',
+                    });
+                    form.reset(); // Reset the form after successful submission
+                }
+            })
+            .catch(error => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: data.success,
+                    confirmButtonColor: '#8E5A51',
+                });
+            });
+        });
+    </script>
+
+
+<script>
+    function formatDate(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const tanggalInput = document.getElementById('tanggal');
+        
+        const today = new Date(); // Hari ini
+        const hPlus7 = new Date(); // Hari ini + 7
+        hPlus7.setDate(hPlus7.getDate() + 7);
+
+        tanggalInput.min = formatDate(today);
+        tanggalInput.max = formatDate(hPlus7);
+    });
+</script>
+
+
 
 </body>
 
