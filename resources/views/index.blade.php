@@ -28,15 +28,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Kirim email
     if (mail($to, $subject, $message, $headers)) {
-        $status = "success";
-    } else {
-        $status = "error";
-    }
+    header("Location: success.php");
+    exit;
+} else {
+    $status = "error";
+}
+
+
 }
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -173,71 +173,140 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <section class="container my-5">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     
-        <h2 class="animate__animated animate__fadeInUp">Layanan Kami:</h2>
+       
     
-        <p>
-            Di Beauty Salon, kami menawarkan berbagai layanan perawatan kecantikan yang dirancang untuk memenuhi kebutuhan Anda.
-            Setiap layanan dilakukan oleh profesional berpengalaman dengan produk berkualitas tinggi.
-        </p>
-        <p>Berikut adalah beberapa layanan yang kami tawarkan:</p>
-    
+        <!DOCTYPE html>
+        <html lang="id">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Layanan Kami</title>
+          <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+          <style>
+            * {
+              box-sizing: border-box;
+            }
         
-            <div class="row text-center mt-4">
-                <div class="col-md-4">
-                    <div class="service-box">
-                        <h4>Haircut</h4>
-                        <p>
-                            Potongan rambut profesional yang disesuaikan dengan gaya dan karakter Anda.
-                            Dapatkan tampilan terbaik yang segar dan stylish setiap kali berkunjung.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box">
-                        <h4>Nail Treatment</h4>
-                        <p>
-                            Perawatan dan seni kuku yang elegan, mulai dari manicure, pedicure, hingga nail art.
-                            Bersih, sehat, dan cantik untuk tangan dan kaki yang memesona.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box">
-                        <h4>Body Treatment</h4>
-                        <p>
-                            Relaksasi tubuh menyeluruh melalui layanan spa, pijat, dan body scrub.
-                            Rasakan kenyamanan dan kesegaran yang menyeluruh di setiap sesi.
-                        </p>
-                    </div>
-                </div>
+            body {
+              font-family: 'Open Sans', sans-serif;
+              background: #fff8f6;
+              padding: 40px 20px;
+              margin: 0;
+            }
+        
+            .section-title {
+              font-family: 'Playfair Display', serif;
+              font-size: 36px;
+              text-align: center;
+              color: #8b4c39;
+              margin-bottom: 10px;
+            }
+        
+            .section-description {
+              text-align: center;
+              font-size: 16px;
+              color: #444;
+              max-width: 800px;
+              margin: 0 auto 40px;
+              line-height: 1.8;
+            }
+        
+            .services-container {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+              gap: 30px;
+              max-width: 1100px;
+              margin: 0 auto;
+            }
+        
+            .service-card {
+              background: white;
+              border-radius: 16px;
+              padding: 30px 20px;
+              text-align: center;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+              transition: all 0.3s ease;
+              position: relative;
+              overflow: hidden;
+            }
+        
+            .service-card:hover {
+              transform: translateY(-8px);
+              box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+            }
+        
+            .service-icon {
+              font-size: 40px;
+              margin-bottom: 15px;
+              transition: transform 0.3s ease;
+            }
+        
+            .service-card:hover .service-icon {
+              transform: scale(1.2) rotate(5deg);
+            }
+        
+            .service-title {
+              font-family: 'Playfair Display', serif;
+              font-size: 22px;
+              margin-bottom: 10px;
+              color: #333;
+            }
+        
+            .service-description {
+              font-size: 15px;
+              color: #555;
+              line-height: 1.6;
+            }
+        
+            @media (max-width: 500px) {
+              .section-title {
+                font-size: 28px;
+              }
+        
+              .section-description {
+                font-size: 14px;
+              }
+            }
+          </style>
+        </head>
+        <body>
+        
+          <h2 class="section-title">✨ Layanan Kami ✨</h2>
+          <p class="section-description">
+            Temukan transformasi terbaik untuk diri Anda bersama layanan perawatan kecantikan premium dari Beauty Salon.
+            Dirancang khusus untuk memenuhi kebutuhan dan gaya hidup Anda, setiap layanan kami ditangani oleh tenaga profesional berpengalaman dan menggunakan produk berkualitas tinggi.
+            💆‍♀️ Nikmati pengalaman yang memanjakan dan hasil yang memukau — karena Anda layak tampil sempurna setiap hari.
+          </p>
+        
+          <div class="services-container">
+            <div class="service-card">
+              <div class="service-icon">💇‍♀️</div>
+              <div class="service-title">Haircut</div>
+              <div class="service-description">
+                Potongan rambut profesional sesuai gaya dan karakter Anda. Dapatkan tampilan segar dan stylish setiap kali berkunjung.
+              </div>
             </div>
-        </section>
         
-        <style>
-            .service-box {
-                border: 2px solid #ccc;
-                border-radius: 10px;
-                padding: 20px;
-                margin-bottom: 20px;
-                background-color: #f9f9f9;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            }
-        
-            .service-box h4 {
-                margin-bottom: 15px;
-                font-size: 1.25rem;
-                color: #333;
-            }
-        
-            .service-box p {
-                color: #666;
-                font-size: 1rem;
-            }
-        </style>
-        
+            <div class="service-card">
+              <div class="service-icon">💅</div>
+              <div class="service-title">Nail Treatment</div>
+              <div class="service-description">
+                Perawatan kuku elegan dari manicure, pedicure hingga nail art. Bersih, sehat, dan cantik untuk tangan dan kaki Anda.
+              </div>
             </div>
         
-    </section>
+            <div class="service-card">
+              <div class="service-icon">🧖‍♀️</div>
+              <div class="service-title">Body Treatment</div>
+              <div class="service-description">
+                Relaksasi menyeluruh melalui spa, pijat, dan scrub. Rasakan kenyamanan dan kesegaran maksimal setiap sesi.
+              </div>
+            </div>
+          </div>
+        
+        </body>
+        </html>
+        
     
 
     <div class="container mt-5">
