@@ -7,9 +7,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tanggal = $_POST['tanggal'];
     $layanan = $_POST['layanan'];
 
+    // Simpan data ke file
+    $reservasi = [
+        'nama' => $nama,
+        'phone' => $phone,
+        'tanggal' => $tanggal,
+        'layanan' => $layanan,
+        'waktu_submit' => date('Y-m-d H:i:s'),
+    ];
 
+    $file = 'reservations.json';
+    $data = [];
+
+    if (file_exists($file)) {
+        $data = json_decode(file_get_contents($file), true);
+    }
+
+    $data[] = $reservasi;
+
+    // Simpan ke file JSON
+    file_put_contents($file, json_encode($data, JSON_PRETTY_PRINT));
+
+    // Email setup
     $subject = "Reservasi Baru di Beauty Salon";
-
     $message = "
     <html>
     <head><title>Reservasi Baru</title></head>
@@ -28,14 +48,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Kirim email
     if (mail($to, $subject, $message, $headers)) {
-    header("Location: success.php");
-    exit;
-} else {
-    $status = "error";
+        header("Location: success.php");
+        exit;
+    } else {
+        $status = "error";
+    }
 }
+?>
 
 
-}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -337,6 +360,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </select>
                     </div>
                     <button type="submit" class="btn btn-dark w-100">Kirim Reservasi</button>
+                    <form action="reservasi.php" method="POST" id="reservationForm">
+
                 </form>
             </div>
         </div>
@@ -365,6 +390,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 
         </form>
+
+      
         
         <!-- Tambahkan pesan status di sini -->
         <?php if ($status === "success"): ?>
@@ -416,48 +443,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>© 2025 Beauty Salon | All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('reservationForm').addEventListener('submit', function (e) {
-            e.preventDefault(); // Prevent the default form submission
-    
-            const form = this;
-            const formData = new FormData(form);
-    
-            fetch(form.action, {
-                method: 'POST',
-                headers: {
-                    'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
-                },
-                body: formData,
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (data.success) {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Success',
-                        text: data.success,
-                        confirmButtonColor: '#8E5A51',
-                    });
-                    form.reset(); // Reset the form after successful submission
-                }
-            })
-            .catch(error => {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Success',
-                    text: data.success,
-                    confirmButtonColor: '#8E5A51',
-                });
-            });
-        });
-    </script>
 
 
 <script>
