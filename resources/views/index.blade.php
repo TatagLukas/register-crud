@@ -336,7 +336,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h2 class="text-center mb-4" style="color: #8E5A51;">Reservasi Sekarang</h2>
-                <form action="{{ route('reservations.store') }}" method="POST" id="reservationForm">
+                
                     @csrf
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
@@ -353,15 +353,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="mb-4">
                         <label for="layanan" class="form-label">Pilih Layanan</label>
                         <select name="service" id="layanan" class="form-select" required>
-                            <option value="">-- Pilih Layanan --</option>
                             <option value="Hair Cut">Hair Cut</option>
                             <option value="Nail Treatment">Nail Treatment</option>
                             <option value="Body Treatment">Body Treatment</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-dark w-100">Kirim Reservasi</button>
-                    <form action="reservasi.php" method="POST" id="reservationForm">
-
+                    <form action="success.php" method="POST" id="reservationForm">
+                    
                 </form>
             </div>
         </div>
