@@ -9,18 +9,23 @@ class ReservationController extends Controller
 {
     public function store(Request $request)
     {
-        // Validate the input
-        $request->validate([
+        // Validasi input
+        $validated = $request->validate([
             'name' => 'required|string|max:255',
             'number' => 'required|string|max:15',
             'reservation_date' => 'required|date',
             'service' => 'required|string|max:255',
         ]);
 
-        // Save the data to the database
-        Reservation::create($request->all());
+        try {
+            // Simpan ke database
+            Reservation::create($validated);
 
-        // Return a JSON response for the popup
-        return response()->json(['success' => 'Data inputted successfully']);
+            // Beri respon sukses
+            return response()->json(['success' => 'Data berhasil disimpan']);
+        } catch (\Exception $e) {
+            // Tangani error server (jika ada)
+            return response()->json(['error' => 'Terjadi kesalahan pada server'], 500);
+        }
     }
 }
