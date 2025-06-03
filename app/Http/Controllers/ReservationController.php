@@ -24,7 +24,7 @@ class ReservationController extends Controller
             // Beri respon sukses
             return response()->json(['success' => 'Data berhasil disimpan']);
         } catch (\Exception $e) {
-            // Tangani error server (jika ada)
+            // Tangani error server 
             return response()->json(['error' => 'Terjadi kesalahan pada server'], 500);
         }
     }
